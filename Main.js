@@ -21,7 +21,7 @@ $(".project-thumb").on("click", function() {
   const title = $(this).data("title");
   const desc = $(this).data("desc");
   const img = $(this).data("img");
-  $("#project-display").html(`<h3>${title}</h3><p>${desc}</p><img src="${img}" alt="${title}">`);
+  $("#project-display").html(`<h3>${title}</h3><p>${desc}</p><img src="${img}" alt="${title}" style="max-width:500px; border-radius:8px;">`);
 });
 
 // Dev.to RSS Feed

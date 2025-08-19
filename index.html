@@ -9,21 +9,20 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <!-- Desktop Navigation -->
+    <!-- Desktop Nav -->
     <nav id="desktop-nav">
       <div class="logo">Anshin Murali</div>
       <div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#profile">Profile</a></li>
           <li><a href="#cv">CV</a></li>
-          <li><a href="#education">Education & Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a href="#weather">Weather</a></li>
         </ul>
       </div>
     </nav>
 
-    <!-- Mobile Navigation -->
+    <!-- Mobile Nav -->
     <nav id="hamburger-nav">
       <div class="logo">Anshin Murali</div>
       <div class="hamburger-menu">
@@ -32,9 +31,8 @@
         </div>
         <div class="menu-links">
           <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#profile" onclick="toggleMenu()">Profile</a></li>
           <li><a href="#cv" onclick="toggleMenu()">CV</a></li>
-          <li><a href="#education" onclick="toggleMenu()">Education & Skills</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
           <li><a href="#weather" onclick="toggleMenu()">Weather</a></li>
         </div>
       </div>
@@ -50,35 +48,37 @@
         <h1 class="title">Anshin Murali</h1>
         <p class="section__text__p2">AI & Data Science Student</p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">Download CV</button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
         </div>
         <div id="socials-container">
-          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-               onclick="location.href='https://linkedin.com/'" />
-          <img src="./assets/github.png" alt="My Github profile" class="icon"
-               onclick="location.href='https://github.com/'" />
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
         </div>
-      </div>
-    </section>
-
-    <!-- Profile Section -->
-    <section id="profile">
-      <p class="section__text__p1">Get To Know Me</p>
-      <h1 class="title">Profile</h1>
-      <div class="text-container">
-        <p>
-          I am currently pursuing a B.Tech in Artificial Intelligence and Data Science. 
-          My interests include Machine Learning, Data Analytics, and Web Development. 
-          I am passionate about solving real-world problems through AI-driven solutions.
-        </p>
       </div>
     </section>
 
     <!-- CV Section -->
     <section id="cv">
       <p class="section__text__p1">My</p>
-      <h1 class="title">CV</h1>
+      <h1 class="title">Curriculum Vitae</h1>
       <div class="about-containers">
         <div class="details-container">
           <h3>Education</h3>
@@ -95,21 +95,26 @@
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Education & Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Technical Expertise</h2>
-            <div class="article-container">
-              <article><h3>Python</h3><p>Advanced</p></article>
-              <article><h3>Machine Learning</h3><p>Intermediate</p></article>
-              <article><h3>Data Analytics</h3><p>Intermediate</p></article>
-              <article><h3>Web Development</h3><p>Intermediate</p></article>
-            </div>
-          </div>
+    <!-- Contact Section -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">examplemail@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://linkedin.com">LinkedIn</a></p>
         </div>
       </div>
     </section>
@@ -119,7 +124,7 @@
       <p class="section__text__p1">Check Live</p>
       <h1 class="title">Weather</h1>
       <div class="weather-card">
-        <input type="text" id="cityInput" placeholder="Enter city name">
+        <input type="text" id="cityInput" placeholder="Enter city name" />
         <button class="btn btn-color-1" id="getWeather">Get Weather</button>
         <div id="weatherResult" class="weather-result"></div>
       </div>
@@ -131,9 +136,8 @@
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#profile">Profile</a></li>
             <li><a href="#cv">CV</a></li>
-            <li><a href="#education">Education & Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a href="#weather">Weather</a></li>
           </ul>
         </div>

@@ -109,3 +109,38 @@ footer {
   border-top: 2px solid #e2c9a6;
 }
 
+/* Weather Card Styling */
+.weather-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.weather-card input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.weather-card button {
+  margin-top: 10px;
+}
+
+.weather-result {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.weather-result img {
+  margin-top: 10px;
+  width: 80px;
+}
+
+

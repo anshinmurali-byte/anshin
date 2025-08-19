@@ -56,4 +56,41 @@ document.getElementById("getWeather").addEventListener("click", () => {
       }
     })
     .catch(() => document.getElementById("weatherResult").innerHTML = "Error fetching data");
+}
+                                                      
+      function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
+
+// Weather API
+const apiKey = "YOUR_OPENWEATHERMAP_API_KEY"; // Replace with your API key
+
+document.getElementById("getWeather").addEventListener("click", () => {
+  const city = document.getElementById("cityInput").value;
+  if (!city) {
+    alert("Please enter a city name");
+    return;
+  }
+
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.cod === "404") {
+        document.getElementById("weatherResult").innerHTML = "<p>City not found</p>";
+      } else {
+        document.getElementById("weatherResult").innerHTML = `
+          <h3>${data.name}</h3>
+          <p>${data.main.temp}°C - ${data.weather[0].description}</p>
+          <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="weather icon">
+        `;
+      }
+    })
+    .catch(() => {
+      document.getElementById("weatherResult").innerHTML = "<p>Error fetching weather data</p>";
+    });
 });
+
+

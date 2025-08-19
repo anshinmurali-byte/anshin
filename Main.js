@@ -1,96 +1,103 @@
-// js/script.js
-// Dynamic Greeting
-window.onload = () => {
-  const greeting = document.getElementById("greeting");
-  const hour = new Date().getHours();
-  if (hour < 12) greeting.textContent = "Good Morning!";
-  else if (hour < 18) greeting.textContent = "Good Afternoon!";
-  else greeting.textContent = "Good Evening!";
-};
-
-// Contact Form Validation
-const contactForm = document.getElementById("contactForm");
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Thank you for contacting me!");
-  contactForm.reset();
-});
-
-// jQuery Project Gallery
-$(".project-thumb").on("click", function() {
-  const title = $(this).data("title");
-  const desc = $(this).data("desc");
-  const img = $(this).data("img");
-  $("#project-display").html(`<h3>${title}</h3><p>${desc}</p><img src="${img}" alt="${title}" style="max-width:500px; border-radius:8px;">`);
-});
-
-// Dev.to RSS Feed
-fetch("https://dev.to/api/articles?username=devteam")
-  .then(response => response.json())
-  .then(data => {
-    const list = document.getElementById("articles-list");
-    data.slice(0,5).forEach(article => {
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a>`;
-      list.appendChild(li);
-    });
-  });
-
-// Weather API
-const apiKey = "YOUR_OPENWEATHERMAP_API_KEY"; // Replace with your key
-
-document.getElementById("getWeather").addEventListener("click", () => {
-  const city = document.getElementById("cityInput").value;
-  if (!city) return alert("Please enter a city name");
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-    .then(res => res.json())
-    .then(data => {
-      if (data.cod === "404") {
-        document.getElementById("weatherResult").innerHTML = "City not found.";
-      } else {
-        document.getElementById("weatherResult").innerHTML = `
-          <h3>${data.name}</h3>
-          <p>${data.main.temp}°C - ${data.weather[0].description}</p>
-          <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="weather icon">
-        `;
-      }
-    })
-    .catch(() => document.getElementById("weatherResult").innerHTML = "Error fetching data");
-}
-                                                      
-      function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
-
-// Weather API
-const apiKey = "YOUR_OPENWEATHERMAP_API_KEY"; // Replace with your API key
-
-document.getElementById("getWeather").addEventListener("click", () => {
-  const city = document.getElementById("cityInput").value;
-  if (!city) {
-    alert("Please enter a city name");
-    return;
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
 
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-    .then(res => res.json())
-    .then(data => {
-      if (data.cod === "404") {
-        document.getElementById("weatherResult").innerHTML = "<p>City not found</p>";
-      } else {
-        document.getElementById("weatherResult").innerHTML = `
-          <h3>${data.name}</h3>
-          <p>${data.main.temp}°C - ${data.weather[0].description}</p>
-          <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="weather icon">
-        `;
-      }
-    })
-    .catch(() => {
-      document.getElementById("weatherResult").innerHTML = "<p>Error fetching weather data</p>";
-    });
-});
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
 
-
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}

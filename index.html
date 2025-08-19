@@ -13,7 +13,7 @@
 <body>
   <header>
     <nav>
-      <ul>
+      <ul class="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#profile">Profile</a></li>
         <li><a href="#cv">CV</a></li>
@@ -26,62 +26,64 @@
     </nav>
   </header>
 
-  <section id="home">
-    <h1>Welcome to My Portfolio</h1>
-    <img src="images/profile.jpg" alt="Profile Picture">
-    <p id="greeting"></p>
-  </section>
+  <main>
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+      <p id="greeting"></p>
+    </section>
 
-  <section id="profile">
-    <h2>Profile</h2>
-    <p>Short biography, career goals, and personal interests.</p>
-    <iframe src="https://www.linkedin.com" width="400" height="300"></iframe>
-  </section>
+    <section id="profile">
+      <h2>Profile</h2>
+      <p>Short biography, career goals, and personal interests.</p>
+      <iframe src="https://www.linkedin.com" width="400" height="300"></iframe>
+    </section>
 
-  <section id="cv">
-    <h2>CV</h2>
-    <p>Education, skills, certifications, and experiences.</p>
-  </section>
+    <section id="cv">
+      <h2>CV</h2>
+      <p>Education, skills, certifications, and experiences.</p>
+    </section>
 
-  <section id="education">
-    <h2>Education & Technical Expertise</h2>
-    <p>Details of academic background, languages, tools, technologies.</p>
-  </section>
+    <section id="education">
+      <h2>Education & Technical Expertise</h2>
+      <p>Details of academic background, languages, tools, technologies.</p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="gallery">
-      <img src="images/project1-thumb.jpg" alt="Project 1" class="project-thumb" data-title="Project 1" data-desc="Description of Project 1" data-img="images/project1.jpg">
-      <img src="images/project2-thumb.jpg" alt="Project 2" class="project-thumb" data-title="Project 2" data-desc="Description of Project 2" data-img="images/project2.jpg">
-    </div>
-    <div id="project-display">
-      <h3>Select a project</h3>
-      <p>Click a thumbnail to see details.</p>
-    </div>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="gallery">
+        <img src="images/project1-thumb.jpg" alt="Project 1" class="project-thumb" data-title="Project 1" data-desc="Description of Project 1" data-img="images/project1.jpg">
+        <img src="images/project2-thumb.jpg" alt="Project 2" class="project-thumb" data-title="Project 2" data-desc="Description of Project 2" data-img="images/project2.jpg">
+      </div>
+      <div id="project-display">
+        <h3>Select a project</h3>
+        <p>Click a thumbnail to see details.</p>
+      </div>
+    </section>
 
-  <section id="articles">
-    <h2>My Articles (Dev.to Feed)</h2>
-    <ul id="articles-list"></ul>
-  </section>
+    <section id="articles">
+      <h2>My Articles (Dev.to Feed)</h2>
+      <ul id="articles-list"></ul>
+    </section>
 
-  <section id="weather">
-    <h2>Weather Information</h2>
-    <input type="text" id="cityInput" placeholder="Enter city">
-    <button id="getWeather">Get Weather</button>
-    <div id="weatherResult"></div>
-  </section>
+    <section id="weather">
+      <h2>Weather Information</h2>
+      <input type="text" id="cityInput" placeholder="Enter city">
+      <button id="getWeather">Get Weather</button>
+      <div id="weatherResult"></div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <p>Connect with me: <a href="mailto:example@email.com">Email</a> | <a href="https://linkedin.com">LinkedIn</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p>Connect with me: <a href="mailto:example@email.com">Email</a> | <a href="https://linkedin.com">LinkedIn</a></p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 My Portfolio</p>

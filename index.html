@@ -1,98 +1,146 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal Portfolio Website">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script defer src="js/script.js"></script>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#education">Education & Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#articles">My Articles</a></li>
-        <li><a href="#weather">Weather</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anshin Murali | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+      <div class="logo">Anshin Murali</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#education">Education & Skills</a></li>
+          <li><a href="#weather">Weather</a></li>
+        </ul>
+      </div>
     </nav>
-  </header>
 
-  <main>
+    <!-- Mobile Navigation -->
+    <nav id="hamburger-nav">
+      <div class="logo">Anshin Murali</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#profile" onclick="toggleMenu()">Profile</a></li>
+          <li><a href="#cv" onclick="toggleMenu()">CV</a></li>
+          <li><a href="#education" onclick="toggleMenu()">Education & Skills</a></li>
+          <li><a href="#weather" onclick="toggleMenu()">Weather</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
     <section id="home">
-      <h1>Welcome to My Portfolio</h1>
-      <img src=""C:\Users\User\Downloads\anshinimage.jpg.jpeg"" alt="Profile Picture" class="profile-pic">
-      <p id="greeting"></p>
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Anshin Murali profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Anshin Murali</h1>
+        <p class="section__text__p2">AI & Data Science Student</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+               onclick="location.href='https://linkedin.com/'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon"
+               onclick="location.href='https://github.com/'" />
+        </div>
+      </div>
     </section>
 
+    <!-- Profile Section -->
     <section id="profile">
-      <h2>Profile</h2>
-      <p>Short biography, career goals, and personal interests.</p>
-      <iframe src="https://www.linkedin.com" width="400" height="300"></iframe>
+      <p class="section__text__p1">Get To Know Me</p>
+      <h1 class="title">Profile</h1>
+      <div class="text-container">
+        <p>
+          I am currently pursuing a B.Tech in Artificial Intelligence and Data Science. 
+          My interests include Machine Learning, Data Analytics, and Web Development. 
+          I am passionate about solving real-world problems through AI-driven solutions.
+        </p>
+      </div>
     </section>
 
+    <!-- CV Section -->
     <section id="cv">
-      <h2>CV</h2>
-      <p>Education, skills, certifications, and experiences.</p>
+      <p class="section__text__p1">My</p>
+      <h1 class="title">CV</h1>
+      <div class="about-containers">
+        <div class="details-container">
+          <h3>Education</h3>
+          <p>B.Tech Artificial Intelligence & Data Science</p>
+        </div>
+        <div class="details-container">
+          <h3>Skills</h3>
+          <p>Python, Java, HTML, CSS, JavaScript, SQL</p>
+        </div>
+        <div class="details-container">
+          <h3>Certifications</h3>
+          <p>Machine Learning Specialization, Web Development</p>
+        </div>
+      </div>
     </section>
 
+    <!-- Education Section -->
     <section id="education">
-      <h2>Education & Technical Expertise</h2>
-      <p>Details of academic background, languages, tools, technologies.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="gallery">
-        <img src="images/project1-thumb.jpg" alt="Project 1" class="project-thumb" data-title="Project 1" data-desc="Description of Project 1" data-img="images/project1.jpg">
-        <img src="images/project2-thumb.jpg" alt="Project 2" class="project-thumb" data-title="Project 2" data-desc="Description of Project 2" data-img="images/project2.jpg">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Education & Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Technical Expertise</h2>
+            <div class="article-container">
+              <article><h3>Python</h3><p>Advanced</p></article>
+              <article><h3>Machine Learning</h3><p>Intermediate</p></article>
+              <article><h3>Data Analytics</h3><p>Intermediate</p></article>
+              <article><h3>Web Development</h3><p>Intermediate</p></article>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="project-display">
-        <h3>Select a project</h3>
-        <p>Click a thumbnail to see details.</p>
-      </div>
     </section>
 
-    <section id="articles">
-      <h2>My Articles (Dev.to Feed)</h2>
-      <ul id="articles-list"></ul>
-    </section>
-
+    <!-- Weather Section -->
     <section id="weather">
-      <h2>Weather Information</h2>
-      <input type="text" id="cityInput" placeholder="Enter city">
-      <button id="getWeather">Get Weather</button>
-      <div id="weatherResult"></div>
+      <p class="section__text__p1">Check Live</p>
+      <h1 class="title">Weather</h1>
+      <div class="weather-card">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button class="btn btn-color-1" id="getWeather">Get Weather</button>
+        <div id="weatherResult" class="weather-result"></div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <p>Connect with me: <a href="mailto:example@email.com">Email</a> | <a href="https://linkedin.com">LinkedIn</a></p>
-    </section>
-  </main>
+    <!-- Footer -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#education">Education & Skills</a></li>
+            <li><a href="#weather">Weather</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Anshin Murali. All Rights Reserved.</p>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 My Portfolio</p>
-  </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
